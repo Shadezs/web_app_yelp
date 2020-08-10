@@ -1,0 +1,24 @@
+<%- include('../partials/restaurants_header') %>
+<h1>RECOMMENDATIONS:</h1>
+<!--<div>
+  <h1><%= businesses[0].name %></h1>
+  <p>Rating: <%= businesses[0].rating %></p>
+  <p>Price: <%= businesses[0].price %></p>
+  <img
+    src="<%= businesses[0].image_url %>"
+  />
+</div>-->
+<div>
+  <% for(var business of businesses) { %>
+    <h1><%= business.name %></h1>
+    <p>Rating: <%= business.rating %></p>
+    <p>Price: <%= business.price %></p>
+    <p>Distance: <%= business.distance %></p>
+    <img
+      src="<%= business.image_url %>"
+    />
+  <% } %>
+</div>
+
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,10 @@
+<%- include('../partials/zipcodepage_header') %>
+    <h1><%= title %></h1>
+    <p>Welcome to the <%= title %></p>
+    <!--<input type="text" name="userzip" id="userzip"  value="" required pattern="[0-9]*" >
+    <a href="/zipcode/90402">Click to go to Recommendations page</p>-->
+    <form action="/zipcode" method="post" >
+      <input type="text" name="userzip" id="userzip" required pattern="[0-9]*" >
+      <button type="submit" name="button">Recommend Me</button>
+    </form>
+<%- include('../partials/footer') %>
