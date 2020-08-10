@@ -40,7 +40,7 @@
     <h1><%= business.name %></h1>
     <p>Rating: <%= business.rating %></p>
     <p>Price: <%= business.price %></p>
-    <p>Distance: <%= business.distance %></p>
+    <p>Distance: <%= (business.distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
       <img src="<%= business.image_url %>" style="width:100%">
   </div>
 
