@@ -9,6 +9,8 @@ XXXX is built upon the Yelp API. XXXX will provide a list of restaurants based o
 
 A typical user, Jenny, loves food but doesn’t want to break the bank. She would like options that get her good + affordable + convenient food. She also sometimes struggles with making a decision of which restaurant to visit. She then goes to XXX to see the restaurants that are closest to her. XXX will give her a list of restaurants that have good ratings and affordability, based on her location. She either decides to choose a restaurant from that list or she’s still struggling. If she is still struggling she navigates to her favorites list, clicks the randomizer, and XXXX chooses what restaurant she should visit! 
 
+This is an awesome webapp!
+
 
 ## Installation
 
