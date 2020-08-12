@@ -68,11 +68,11 @@ header {
   .next {
     cursor: pointer;
     position: absolute;
-    top: 23%;
+    top: 50%;
     width: auto;
     padding: 16px;
-    padding-top: 13%;
-    padding-bottom: 13.5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin-top: -50px;
     color: rgb(122, 18, 18);
     font-weight: bold;
@@ -81,7 +81,6 @@ header {
     user-select: none;
     -webkit-user-select: none;
   }
-  
   
   /* Position the "next button" to the right
   .next {
@@ -120,15 +119,26 @@ header {
   /* Six columns side by side */
   .column {
     float: left;
-    width: 16.66%;
+    /* width: 16.66%; */
+    width: 20%;
   }
   
   /* Add a transparency effect for thumnbail images */
   .demo {
     opacity: 0.6;
+    object-fit: cover;
+    width: 100%;
+    height: 255.22px;
   }
   
   .active,
   .demo:hover {
     opacity: 1;
+  }
+
+  .centerPic{
+        object-fit: cover;
+        width:500px; 
+        height:400px
+
   }

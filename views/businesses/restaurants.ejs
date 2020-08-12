@@ -17,79 +17,97 @@
     <br>
     <div class="rating">Rating: <%= businesses[0].rating %></div>
     <div class="price">Price: <%= businesses[0].price %></div>
-      <img src="<%= businesses[0].image_url %>" style="width:500px; height:400px;">  
+      <img class="centerPic" src="<%= businesses[0].image_url %>">  
     <p>Distance: <%= (businesses[0].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>  
   </div>
   <div class="mySlides">
     <div class="numbertext">2 / 10</div>
     <h1><%= businesses[1].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[1].rating %></div>
     <div class="price">Price: <%= businesses[1].price %></div>
-      <img src="<%= businesses[1].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[1].image_url %>">
     <p>Distance: <%= (businesses[1].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">3 / 10</div>
     <h1><%= businesses[2].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[2].rating %></div>
     <div class="price">Price: <%= businesses[2].price %></div>
-      <img src="<%= businesses[2].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[2].image_url %>">
     <p>Distance: <%= (businesses[2].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">4 / 10</div>
     <h1><%= businesses[3].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[3].rating %></div>
     <div class="price">Price: <%= businesses[3].price %></div>
-      <img src="<%= businesses[3].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[3].image_url %>">
     <p>Distance: <%= (businesses[3].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">5 / 10</div>
     <h1><%= businesses[4].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[4].rating %></div>
     <div class="price">Price: <%= businesses[4].price %></div>
-      <img src="<%= businesses[4].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[4].image_url %>">
     <p>Distance: <%= (businesses[4].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">6 / 10</div>
     <h1><%= businesses[5].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[5].rating %></div>
     <div class="price">Price: <%= businesses[5].price %></div>
-      <img src="<%= businesses[5].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[5].image_url %>" >
     <p>Distance: <%= (businesses[5].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">7 / 10</div>
     <h1><%= businesses[6].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[6].rating %></div>
     <div class="price">Price: <%= businesses[6].price %></div>
-      <img src="<%= businesses[6].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[6].image_url %>">
     <p>Distance: <%= (businesses[6].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">8 / 10</div>
     <h1><%= businesses[7].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[7].rating %></div>
     <div class="price">Price: <%= businesses[7].price %></div>
-      <img src="<%= businesses[7].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[7].image_url %>">
     <p>Distance: <%= (businesses[7].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">9 / 10</div>
     <h1><%= businesses[8].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[8].rating %></div>
     <div class="price">Price: <%= businesses[8].price %></div>
-      <img src="<%= businesses[8].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[8].image_url %>">
     <p>Distance: <%= (businesses[8].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
   <div class="mySlides">
     <div class="numbertext">10 / 10</div>
     <h1><%= businesses[9].name %></h1>
+    <br>
+    <br>
     <div class="rating">Rating: <%= businesses[9].rating %></div>
     <div class="price">Price: <%= businesses[9].price %></div>
-      <img src="<%= businesses[9].image_url %>" style="width:500px; height:400px;">
+      <img class="centerPic" src="<%= businesses[9].image_url %>">
     <p>Distance: <%= (businesses[9].distance * 0.000621371).toPrecision(2) %> miles (center of zipcode)</p>
   </div>
 
@@ -102,6 +120,8 @@
 
 </div>
 
+  
+
 <!-- Image text -->
 <div class="caption-container">
   <p id="caption"></p>
@@ -110,34 +130,34 @@
 <!-- Thumbnail images -->
 <div class="row">
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[0].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(1)" alt="<%= businesses[0].name %>">
+    <img class="demo cursor" src="<%= businesses[0].image_url %>" onclick="currentSlide(1)" alt="<%= businesses[0].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[1].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(2)" alt="<%= businesses[1].name %>">
+    <img class="demo cursor" src="<%= businesses[1].image_url %>" onclick="currentSlide(2)" alt="<%= businesses[1].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[2].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(3)" alt="<%= businesses[2].name %>">
+    <img class="demo cursor" src="<%= businesses[2].image_url %>" onclick="currentSlide(3)" alt="<%= businesses[2].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[3].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(4)" alt="<%= businesses[3].name %>">
+    <img class="demo cursor" src="<%= businesses[3].image_url %>" onclick="currentSlide(4)" alt="<%= businesses[3].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[4].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(5)" alt="<%= businesses[4].name %>">
+    <img class="demo cursor" src="<%= businesses[4].image_url %>" onclick="currentSlide(5)" alt="<%= businesses[4].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[5].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(6)" alt="<%= businesses[5].name %>">
+    <img class="demo cursor" src="<%= businesses[5].image_url %>" onclick="currentSlide(6)" alt="<%= businesses[5].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[6].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(7)" alt="<%= businesses[6].name %>">
+    <img class="demo cursor" src="<%= businesses[6].image_url %>" onclick="currentSlide(7)" alt="<%= businesses[6].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[7].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(8)" alt="<%= businesses[7].name %>">
+    <img class="demo cursor" src="<%= businesses[7].image_url %>" onclick="currentSlide(8)" alt="<%= businesses[7].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[8].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(9)" alt="<%= businesses[8].name %>">
+    <img class="demo cursor" src="<%= businesses[8].image_url %>" onclick="currentSlide(9)" alt="<%= businesses[8].name %>">
   </div>
   <div class="column">
-    <img class="demo cursor" src="<%= businesses[9].image_url %>" style="width:100%; height:255.22px;" onclick="currentSlide(10)" alt="<%= businesses[9].name %>">
+    <img class="demo cursor" src="<%= businesses[9].image_url %>" onclick="currentSlide(10)" alt="<%= businesses[9].name %>">
   </div>
 </div>
 
