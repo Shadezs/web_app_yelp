@@ -1,6 +1,6 @@
 header {
-  height: 30vh;
-  background-image: url("https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/skewers.jpeg');
+height: 30vh;
   /* flex-box thing */
   display: flex;
   flex-direction: column;
@@ -8,20 +8,40 @@ header {
   justify-content: center;
   background-size: cover; 
   margin-bottom: 100px;
- }
+  color: #fff;
+}
  
  * {
   margin: 0px;
   padding: 0px;
-  font-family: monospace;
+  font-family: Montserrat;
  }
  
- 
- h1{
+ html{
+     background-color: black;
+ }
+h1,h2{
      text-align: center;
  }
  
  form{
      text-align: center;
-     padding-bottom: 150px;
+     padding-bottom: 280px;
  }
+
+ #button {
+    justify-content: center;
+    border: 2px solid #2e2e2e;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.2125rem;
+    padding: 20px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  
+  #button:hover {
+    border-color: #fff;
+  }
