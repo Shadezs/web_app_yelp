@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3035;
 
 require('dotenv').config();
-const firebase = require('./config/firebase')
+// const firebase = require('./config/firebase')
 const indexRouter = require('./routes');
 const zipcodeRouter = require('./routes/zipcode');
 const signup = require('./routes')
