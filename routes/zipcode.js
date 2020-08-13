@@ -39,7 +39,6 @@ router.get('/', (req, res, next) => {
   }
 
 });*/
-
 /* GET yelpJSON.businesses */
 router.post('/', async(req, res, next) => {
     const userzip = req.body.userzip;

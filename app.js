@@ -4,9 +4,10 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3035;
 
 require('dotenv').config();
-
-const indexRouter = require('./routes/index');
+const firebase = require('./config/firebase')
+const indexRouter = require('./routes');
 const zipcodeRouter = require('./routes/zipcode');
+const signup = require('./routes')
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/zipcode', zipcodeRouter);
-
+app.use('/signup', signup)
 app.listen(PORT, (err) =>
         console.log(`${err ? err : `running on PORT ${PORT}`}`),
 );
