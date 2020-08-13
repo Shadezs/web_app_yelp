@@ -232,12 +232,11 @@
     </div>
     <div id='map' style='width: 400px; height: 300px;'></div>
     <script>
-        require('dotenv').config();
-        mapboxgl.accessToken = process.env.MAPBOX_KEY;
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11'
-        });
+        mapboxgl.accessToken = //Type your MapBox API key for map to work
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11'
+            });
     </script>
 
     <script>
