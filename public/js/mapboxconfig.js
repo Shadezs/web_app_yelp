@@ -1,9 +1,9 @@
-mapboxgl.accessToken = //Type your MapBox API key for map to work
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11'
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZGVzeiIsImEiOiJja2NiNXd0bHEwMTNyMnJtenRybnoxZjRyIn0.4lceMjYIVlaaIT9E8FoSyw' //Type your MapBox API key for map to work
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/shadesz/ckdxii11i16sy19phd8a7sdp6'
 
-    });
+});
 console.log(busines)
 map.on('load', function() {
     map.loadImage(
