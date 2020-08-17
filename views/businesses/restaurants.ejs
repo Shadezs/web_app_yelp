@@ -197,46 +197,22 @@
 
     <!-- Thumbnail images -->
     <div class="row">
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[0].image_url %>" onclick="currentSlide(1)" alt="<%= businesses[0].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[1].image_url %>" onclick="currentSlide(2)" alt="<%= businesses[1].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[2].image_url %>" onclick="currentSlide(3)" alt="<%= businesses[2].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[3].image_url %>" onclick="currentSlide(4)" alt="<%= businesses[3].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[4].image_url %>" onclick="currentSlide(5)" alt="<%= businesses[4].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[5].image_url %>" onclick="currentSlide(6)" alt="<%= businesses[5].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[6].image_url %>" onclick="currentSlide(7)" alt="<%= businesses[6].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[7].image_url %>" onclick="currentSlide(8)" alt="<%= businesses[7].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[8].image_url %>" onclick="currentSlide(9)" alt="<%= businesses[8].name %>">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="<%= businesses[9].image_url %>" onclick="currentSlide(10)" alt="<%= businesses[9].name %>">
-        </div>
+        <%businesses.forEach((b,i)=> {%>
+            <div class="column">
+                <img class="demo cursor" src="<%= b.image_url %>" onclick="currentSlide(i+1)" alt="<%= b.name %>">
+            </div>
+            <%}) %>
     </div>
     <div id='map' style='width: 100%; height: 500px;'></div>
+    <pre id="coordinates" class="coordinates"></pre>
     <script>
-        mapboxgl.accessToken = //Type your MapBox API key for map to work
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11'
-            });
+        var busines = {
+            longitude: "<%-JSON.stringify(businesses[0].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[0].coordinates.latitude)  %> "
+        }
+        console.log(busines);
+        //var localbusinesses = JSON.stringify(buss);
     </script>
-
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
