@@ -1,10 +1,12 @@
 mapboxgl.accessToken = //// use API KEY HERE
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/shadesz/ckdxii11i16sy19phd8a7sdp6'
+        style: 'mapbox://styles/shadesz/ckdxii11i16sy19phd8a7sdp6',
+        center: [-120.111, 35.144],
+        zoom: 9
 
     });
-console.log(array_bussines[0])
+//console.log(bussniseobj[1].name)
 map.on('load', function() {
     map.loadImage(
         'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
@@ -20,7 +22,12 @@ map.on('load', function() {
                     'features': [{
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[0].name}</strong><p></p>`
+                            'description': `<strong>${array_bussines[0].name}</strong><p>
+                            
+                            
+                            address : ${array_bussines[0].display_address}
+                            
+                            </p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -29,7 +36,7 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[1].name}</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a Mad Men Season Five Finale Watch Party, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>`
+                            'description': `<strong>${array_bussines[1].name}</strong><p>address : ${array_bussines[1].display_address}.</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -38,7 +45,7 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[2].name}</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a Big Backyard Beach Bash and Wine Fest on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.</p>`
+                            'description': `<strong>${array_bussines[2].name}</strong><p>address : ${array_bussines[2].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -47,7 +54,7 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[3].name}</strong><p>The Ballston Arts & Crafts Market sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>`
+                            'description': `<strong>${array_bussines[3].name}</strong><p>address : ${array_bussines[3].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -56,7 +63,9 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[4].name}</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year's Seersucker Social bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>`
+                            'description': `<strong>${array_bussines[4].name}</strong><p>
+                            
+                            address : ${array_bussines[4].display_address}.</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -65,7 +74,7 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[5].name}</strong><p>The annual Capital Pride Parade makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>`
+                            'description': `<strong>${array_bussines[5].name}</strong><p>address : ${array_bussines[5].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -74,7 +83,7 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[6].name}</strong><p>Jazz-influenced hip hop artist Muhsinah plays the Black Cat (1811 14th Street NW) tonight with Exit Clov and Gods’illa. 9:00 p.m. $12.</p>`
+                            'description': `<strong>${array_bussines[6].name}</strong><p>address : ${array_bussines[6].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -83,7 +92,7 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[7].name}</strong><p>The Arlington Players' production of Stephen Sondheim's <em>A Little Night Music</em> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>`
+                            'description': `<strong>${array_bussines[7].name}</strong><p>address : ${array_bussines[7].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -92,7 +101,7 @@ map.on('load', function() {
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[8].name}</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>`
+                            'description': `<strong>${array_bussines[8].name}</strong><p>address : ${array_bussines[8].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
@@ -167,5 +176,9 @@ map.on('load', function() {
     map.on('mouseleave', 'places', function() {
         map.getCanvas().style.cursor = '';
         popup.remove();
+    });
+    map.flyTo({
+        center: [array_bussines[0].longitude, array_bussines[0].latitude],
+        essential: true
     });
 });
