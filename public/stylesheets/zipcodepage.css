@@ -1,5 +1,6 @@
 header {
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/skewers.jpeg');
+/* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/skewers.jpeg'); */
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/landimg.png');
 height: 30vh;
   /* flex-box thing */
   display: flex;
@@ -45,3 +46,8 @@ h1,h2{
   #button:hover {
     border-color: #fff;
   }
+
+.form.userzip, .form.restaurantType{
+  display: inline-block;
+ min-width: 48.8%;
+}
