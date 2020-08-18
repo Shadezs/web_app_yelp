@@ -6,7 +6,21 @@ mapboxgl.accessToken = //// use API KEY HERE
         zoom: 9
 
     });
-//console.log(bussniseobj[1].name)
+let geolocationjson = {
+        type: 'FeatureCollection',
+        features: [{
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: []
+            },
+            properties: {
+                title: 'Mapbox',
+                discription: 'User A'
+            }
+        }]
+    }
+    //console.log(bussniseobj[1].name)
 map.on('load', function() {
     map.loadImage(
         'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
@@ -22,90 +36,90 @@ map.on('load', function() {
                     'features': [{
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[0].name}</strong><p>
+                            'description': `<strong>${arrayBussines[0].name}</strong><p>
                             
                             
-                            address : ${array_bussines[0].display_address}
+                            address : ${arrayBussines[0].display_address}
                             
                             </p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[0].longitude, array_bussines[0].latitude]
+                            'coordinates': [arrayBussines[0].longitude, arrayBussines[0].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[1].name}</strong><p>address : ${array_bussines[1].display_address}.</p>`
+                            'description': `<strong>${arrayBussines[1].name}</strong><p>address : ${arrayBussines[1].display_address}.</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[1].longitude, array_bussines[1].latitude]
+                            'coordinates': [arrayBussines[1].longitude, arrayBussines[1].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[2].name}</strong><p>address : ${array_bussines[2].display_address}</p>`
+                            'description': `<strong>${arrayBussines[2].name}</strong><p>address : ${arrayBussines[2].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[2].longitude, array_bussines[2].latitude]
+                            'coordinates': [arrayBussines[2].longitude, arrayBussines[2].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[3].name}</strong><p>address : ${array_bussines[3].display_address}</p>`
+                            'description': `<strong>${arrayBussines[3].name}</strong><p>address : ${arrayBussines[3].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[3].longitude, array_bussines[3].latitude]
+                            'coordinates': [arrayBussines[3].longitude, arrayBussines[3].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[4].name}</strong><p>
+                            'description': `<strong>${arrayBussines[4].name}</strong><p>
                             
-                            address : ${array_bussines[4].display_address}.</p>`
+                            address : ${arrayBussines[4].display_address}.</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[4].longitude, array_bussines[4].latitude]
+                            'coordinates': [arrayBussines[4].longitude, arrayBussines[4].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[5].name}</strong><p>address : ${array_bussines[5].display_address}</p>`
+                            'description': `<strong>${arrayBussines[5].name}</strong><p>address : ${arrayBussines[5].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[5].longitude, array_bussines[5].latitude]
+                            'coordinates': [arrayBussines[5].longitude, arrayBussines[5].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[6].name}</strong><p>address : ${array_bussines[6].display_address}</p>`
+                            'description': `<strong>${arrayBussines[6].name}</strong><p>address : ${arrayBussines[6].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[6].longitude, array_bussines[6].latitude]
+                            'coordinates': [arrayBussines[6].longitude, arrayBussines[6].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[7].name}</strong><p>address : ${array_bussines[7].display_address}</p>`
+                            'description': `<strong>${arrayBussines[7].name}</strong><p>address : ${arrayBussines[7].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[7].longitude, array_bussines[7].latitude]
+                            'coordinates': [arrayBussines[7].longitude, arrayBussines[7].latitude]
                         }
                     }, {
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${array_bussines[8].name}</strong><p>address : ${array_bussines[8].display_address}</p>`
+                            'description': `<strong>${arrayBussines[8].name}</strong><p>address : ${arrayBussines[8].display_address}</p>`
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [array_bussines[8].longitude, array_bussines[8].latitude]
+                            'coordinates': [arrayBussines[8].longitude, arrayBussines[8].latitude]
                         }
                     }]
                 }
@@ -128,6 +142,7 @@ map.on('load', function() {
         })
         .setLngLat([0, 0])
         .addTo(map);
+    let userLocation = new mapboxgl.Marker({ draggable: false }).setLngLat([-120.111, 35.144]).addTo(map);
 
     function onDragEnd() {
         var lngLat = marker.getLngLat();
@@ -178,7 +193,7 @@ map.on('load', function() {
         popup.remove();
     });
     map.flyTo({
-        center: [array_bussines[0].longitude, array_bussines[0].latitude],
+        center: [arrayBussines[0].longitude, arrayBussines[0].latitude],
         essential: true
     });
 });
