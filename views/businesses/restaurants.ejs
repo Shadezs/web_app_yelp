@@ -206,10 +206,69 @@
     <div id='map' style='width: 100%; height: 500px;'></div>
     <pre id="coordinates" class="coordinates"></pre>
     <script>
-        var busines = {
+        var busines0 = {
+            name: '<%-businesses[0].name-%>',
+            image_url: '<%-JSON.stringify(businesses[0].image_url)%>',
             longitude: "<%-JSON.stringify(businesses[0].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[0].coordinates.latitude)  %> "
         }
+        var busines1 = {
+            name: '<%-businesses[1].name-%>',
+            longitude: "<%-JSON.stringify(businesses[1].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[1].coordinates.latitude)  %> "
+        }
+        var busines2 = {
+            name: '<%-businesses[2].name-%>',
+            longitude: "<%-JSON.stringify(businesses[2].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[2].coordinates.latitude)  %> "
+        }
+        var busines3 = {
+            //name: "<%-businesses[3].name-%>",
+            longitude: "<%-JSON.stringify(businesses[3].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[3].coordinates.latitude)  %> "
+        }
+        var busines4 = {
+            name: '<%-businesses[4].name-%>',
+            longitude: "<%-JSON.stringify(businesses[4].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[4].coordinates.latitude)  %> "
+        }
+        var busines5 = {
+            name: '<%-businesses[5].name-%>',
+            longitude: "<%-JSON.stringify(businesses[5].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[5].coordinates.latitude)  %> "
+        }
+        var busines6 = {
+            name: '<%-businesses[6].name-%>',
+            longitude: "<%-JSON.stringify(businesses[6].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[6].coordinates.latitude)  %> "
+        }
+        var busines7 = {
+            name: "<%-businesses[7].name-%>",
+            longitude: "<%-JSON.stringify(businesses[7].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[7].coordinates.latitude)  %> "
+        }
+        var busines8 = {
+            name: "<%-businesses[8].name-%>",
+            longitude: "<%-JSON.stringify(businesses[8].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[8].coordinates.latitude)  %> "
+        }
+        var busines9 = {
+            name: '<%-businesses[9].name-%>',
+            longitude: "<%-JSON.stringify(businesses[9].coordinates.longitude)%>",
+            latitude: "<%-JSON.stringify(businesses[9].coordinates.latitude)  %> "
+        }
+        var array_bussines = []
+        array_bussines.push(busines0)
+        array_bussines.push(busines1)
+        array_bussines.push(busines2)
+        array_bussines.push(busines3)
+        array_bussines.push(busines4)
+        array_bussines.push(busines5)
+        array_bussines.push(busines6)
+        array_bussines.push(busines7)
+        array_bussines.push(busines8)
+        array_bussines.push(busines9)
+
         console.log(busines);
         //var localbusinesses = JSON.stringify(buss);
     </script>
