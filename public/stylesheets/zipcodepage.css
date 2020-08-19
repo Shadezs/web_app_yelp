@@ -1,14 +1,15 @@
 header {
 /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/skewers.jpeg'); */
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/landimg.png');
-height: 30vh;
+background-image: url('images/three.png');
+/* height: 30vh; */
+height: 35vh;
   /* flex-box thing */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   background-size: cover; 
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   color: #fff;
 }
  
@@ -18,9 +19,32 @@ height: 30vh;
   font-family: Montserrat;
  }
  
- html{
+ /* html{
      background-color: black;
- }
+ } */
+
+html {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+html, body{
+  height: 100%;
+}
+
 h1,h2{
      text-align: center;
  }
@@ -31,7 +55,7 @@ h1,h2{
  }
 
  #button {
-    justify-content: center;
+    /* justify-content: center;
     border: 2px solid #2e2e2e;
     background-color: rgba(255, 255, 255, 0.05);
     color: #fff;
@@ -40,14 +64,19 @@ h1,h2{
     padding: 20px 30px;
     text-align: center;
     text-transform: uppercase;
-    user-select: none;
+    user-select: none; */
+    background-image: url('images/searchicon.png');
+    background-size: cover;
+    background: cover;
+    width: 25px; 
+    height: 25px;
+    border-radius: 50%;
   }
   
   #button:hover {
     border-color: #fff;
   }
 
-.form.userzip, .form.restaurantType{
-  display: inline-block;
- min-width: 48.8%;
-}
+/* .userInputs input{
+  float: left;
+} */
