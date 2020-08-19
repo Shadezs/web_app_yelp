@@ -200,7 +200,7 @@
     <div class="row">
         <%businesses.forEach((b,i)=> {%>
             <div class="column">
-                <img class="demo cursor" src="<%= b.image_url %>" onclick="currentSlide(<%=i+1%>)" alt="<%= b.name %>">
+                <img class="demo cursor" src="<%= b.image_url %>" onclick="currentSlide('<%=i+1%>')" alt="<%= b.name %>">
             </div>
             <%}) %>
     </div>

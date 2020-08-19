@@ -1,11 +1,11 @@
-mapboxgl.accessToken = //// use API KEY HERE
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/shadesz/ckdxii11i16sy19phd8a7sdp6',
-        center: [-120.111, 35.144],
-        zoom: 9
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZGVzeiIsImEiOiJja2NiNXd0bHEwMTNyMnJtenRybnoxZjRyIn0.4lceMjYIVlaaIT9E8FoSyw' //// use API KEY HERE
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/shadesz/ckdxii11i16sy19phd8a7sdp6',
+    center: [-120.111, 35.144],
+    zoom: 9
 
-    });
+});
 let geolocationjson = {
         type: 'FeatureCollection',
         features: [{
