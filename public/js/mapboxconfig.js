@@ -1,4 +1,4 @@
-mapboxgl.accessToken = //// use API KEY HERE
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZGVzeiIsImEiOiJja2NiNXd0bHEwMTNyMnJtenRybnoxZjRyIn0.4lceMjYIVlaaIT9E8FoSyw'//// use API KEY HERE
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/shadesz/ckdxii11i16sy19phd8a7sdp6',

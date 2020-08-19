@@ -4,26 +4,43 @@
   <!-- <h1><%= title %></h1> -->
     <!-- <p>Welcome to the <%= title %></p> -->
       <!-- <h1 style="color: white; font-size: 48px;">To Receive Our Personalized Recommendations:</h1> -->
-      <h1 style="color: white">To Receive Our Personalized Recommendations:</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2 style="color: white;">Enter your ZipCode . . .</h2>
-    <br>
-    <br>
-    <form action="/zipcode" method="post" >
-      <input type="text" name="userzip" id="userzip" required pattern="[0-9]*" >
-      <br>
+      <!-- <h1 style="color: white">To Receive Our Personalized Recommendations:</h1>
       
-      <input type="text" name="restaurantType" id="restaurantType" >
+    <br>
+    <br>
+    <br>
+    <br> -->
+    <!-- <h2 style="color: white;">Enter your ZipCode . . .</h2>
+    <br>
+    <br> -->
+    <h2>Search Food :</h2>
+    <form action="/zipcode" method="post" >
+      <div class = "userInputs">
+        <input type="text" name="userzip" id="userzip" placeholder="Enter your ZipCode" required pattern="[0-9]*" >
+        <select name="restaurantType" id="restaurantType">
+          <option value="pizza">Pizza</option>
+          <option value="sushi">Sushi</option>
+          <option value="thai">Thai</option>
+          <option value="indian">Indian</option>
+          <option value="dessert">Dessert</option>
+          <option value="mexican">Mexican</option>
+          <option value="chinese">Chinese</option>
+          <option value="fastfood">Fast Food</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="american">American</option>
+          <option value="coffee">Coffee</option>
+          <option value="italian">Italian</option>
+          <option value="burger">Burger</option>
+          <option value="vegan">Vegan</option>
+          <option value="icecream">Ice Cream</option>
+        </select>
+        <button type="submit" id="button" name="button"></button>
+      </div>
+      <!-- <button type="submit" id="button" name="button">Recommend Me</button> -->
       <br>
-      <br>
-      <button type="submit" id="button" name="button">Recommend Me</button>
-      <br>
-      <br>
-      <br>
-      <br>
+      <!-- <br>
+      <br> -->
+      
       <div id='map' style='width: 100%; height: 500px;'></div>
       
     </form>
