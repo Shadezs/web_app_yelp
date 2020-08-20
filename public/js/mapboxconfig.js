@@ -1,11 +1,13 @@
-mapboxgl.accessToken = //// use API KEY HERE
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/shadesz/cke0ucfal08fr19qtty2kfzdg',
-        center: [-120.111, 35.144],
-        zoom: 1
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZGVzeiIsImEiOiJja2NiNXd0bHEwMTNyMnJtenRybnoxZjRyIn0.4lceMjYIVlaaIT9E8FoSyw' //// use API KEY HERE
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/shadesz/cke0ucfal08fr19qtty2kfzdg',
+    center: [-120.111, 35.144],
+    zoom: 1
 
-    });
+});
+let geoloc = JSON.parse(window.localStorage.getItem("coordinates"))
+let geoflag = JSON.parse(window.localStorage.getItem("isGeolocOn"))
 let geolocationjson = {
         type: 'FeatureCollection',
         features: [{
@@ -140,40 +142,43 @@ map.on('load', function() {
     );
     ///loads bitmoji on user location
     map.loadImage('/stylesheets/images/Screen Shot 2020-08-19 at 11.46.57 AM.png', function(error, image) {
-        if (error) throw error;
-        map.addImage('custom-userLocation', image);
-        map.addSource('userLocation', {
-            'type': 'FeatureCollection',
-            'features': [{
-                'type': 'Feature',
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [-73.00, 120.232]
-                },
-                'properties': {
-                    'title': 'Mapbox',
-                    'discription': 'User A'
+            if (error) throw error;
+            map.addImage('custom-userLocation', image);
+            map.addSource('userLocation', {
+                'type': 'FeatureCollection',
+                'features': [{
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-73.00, 120.232]
+                    },
+                    'properties': {
+                        'title': 'Mapbox',
+                        'discription': 'User A'
+                    }
+                }]
+            })
+            map.addLayer({
+                'id': 'userLocation',
+                'type': 'symbol',
+                'source': 'userLocation',
+                'layout': {
+                    'icon-image': 'custom-userLocation',
+                    'icon-size': 0.25,
+                    'icon-allow-overlap': true
                 }
-            }]
-        })
-        map.addLayer({
-            'id': 'userLocation',
-            'type': 'symbol',
-            'source': 'userLocation',
-            'layout': {
-                'icon-image': 'custom-userLocation',
-                'icon-size': 0.25,
-                'icon-allow-overlap': true
-            }
 
+            })
         })
-    })
-    var marker = new mapboxgl.Marker({
-            draggable: true
-        })
-        .setLngLat([0, 0])
-        .addTo(map);
-    let userLocation = new mapboxgl.Marker({ draggable: false }).setLngLat([-120.111, 35.144]).addTo(map);
+        //var marker = new mapboxgl.Marker({
+        //      draggable: true
+        //})
+        //.setLngLat([0, 0])
+        //.addTo(map);
+    let userLocation
+    if (geoflag) {
+        userLocation = new mapboxgl.Marker({ draggable: false }).setLngLat([geoloc.long, geoloc.lat]).addTo(map);
+    }
 
     function onDragEnd() {
         var lngLat = marker.getLngLat();
@@ -182,7 +187,7 @@ map.on('load', function() {
             'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
     }
 
-    marker.on('dragend', onDragEnd);
+    //  marker.on('dragend', onDragEnd);
     // Create a popup, but don't add it to the map yet.
     var popup = new mapboxgl.Popup({
         closeButton: false,
@@ -223,10 +228,18 @@ map.on('load', function() {
         map.getCanvas().style.cursor = '';
         popup.remove();
     });
+    if (typeof arrayBussines !== 'undefined') {
+        map.flyTo({
+            center: [arrayBussines[0].longitude, arrayBussines[0].latitude],
+            essential: true,
+            zoom: 12,
+            speed: 0.7
+        });
+    }
     map.flyTo({
-        center: [arrayBussines[0].longitude, arrayBussines[0].latitude],
+        center: [geoloc.long, geoloc.lat],
         essential: true,
         zoom: 12,
         speed: 0.7
-    });
+    })
 });

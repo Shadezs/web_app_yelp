@@ -1,60 +1,68 @@
 header {
-/* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/skewers.jpeg'); */
-background-image: url('images/three.png');
-/* height: 30vh; */
-height: 35vh;
-  /* flex-box thing */
-  display: flex;
-  flex-direction: column;
-  /* align-items: center;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/skewers.jpeg'); */
+    background-image: url('images/three.png');
+    /* height: 30vh; */
+    height: 35vh;
+    /* flex-box thing */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
   justify-content: center; */
-  background-size: cover; 
-  /* margin-bottom: 100px; */
-  color: #fff;
+    background-size: cover;
+    /* margin-bottom: 100px; */
+    color: #fff;
 }
- 
- * {
-  margin: 0px;
-  padding: 0px;
-  font-family: Montserrat;
- }
- 
- /* html{
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat;
+}
+
+
+/* html{
      background-color: black;
  } */
 
 html {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-html, body{
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
 
-h1,h2{
-     text-align: center;
- }
- 
- form{
-     text-align: center;
-     padding-bottom: 280px;
- }
+h1,
+h2 {
+    text-align: center;
+}
 
- #button {
+form {
+    text-align: center;
+    padding-bottom: 280px;
+}
+
+#geobutton {
+    width: 25px;
+    height: 25px;
+}
+
+#button {
     /* justify-content: center;
     border: 2px solid #2e2e2e;
     background-color: rgba(255, 255, 255, 0.05);
@@ -68,14 +76,15 @@ h1,h2{
     background-image: url('images/searchicon.png');
     background-size: cover;
     background: cover;
-    width: 25px; 
+    width: 25px;
     height: 25px;
     border-radius: 50%;
-  }
-  
-  #button:hover {
+}
+
+#button:hover {
     border-color: #fff;
-  }
+}
+
 
 /* .userInputs input{
   float: left;
