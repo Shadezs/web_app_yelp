@@ -1,8 +1,10 @@
 # Yummies
 
 Overview Platform: Web
-Yummies built upon the Yelp API. XXXX will provide a list of restaurants based on best rating and affordability. It will display restaurants that are closest to your location. It will allow users to search for optimal restaurant choices, and filter based on type of food. It will also allow users to favorite their restaurants and use a randomizer to pick a restaurant when facing a dilemma to choose a restaurant.
+Yummies built upon the Yelp API. XXXX will provide a list of restaurants based on best rating and affordability. It will display restaurants that are closest to your location. It will allow users to search for optimal restaurant choices, and filter based on type of food. It will also allow users to favorite their restaurants and use a randomizer to pick a restaurant when facing a dilemma to choose a restaurant.  
 
+
+![image](https://github.com/Shadezs/web_app_yelp/blob/Snapyummys/ezgif.com-optimize.gif)
 
 ## Technologies
 - Mapbox
