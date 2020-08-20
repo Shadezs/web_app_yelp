@@ -6,7 +6,7 @@
     <br>
     <br>
     <br> -->
-    
+
     <div id='map' style='width: 100%; height: 500px;'></div>
     <!-- <div class="container">
         
@@ -208,65 +208,105 @@
     <!-- <div id='map' style='width: 100%; height: 500px;'></div> -->
     <pre id="coordinates" class="coordinates"></pre>
     <script>
+        ///Look this is not the best way to do this . i know this should just be a loop but when i implement the loop it throws an error that loop iterator i is not define when using it with businesses array
         var arrayBussines = []
         var busines0 = {
             name: "<%-businesses[0].name-%>",
             display_address: '<%-businesses[0].location.display_address%> ',
             image_url: '<%-businesses[0].image_url%>',
+            review_counts: '<%- JSON.stringify(businesses[0].review_count)%> ',
+            prices: '<%- businesses[0].price %> ',
+            display_phoneNumber: '<%-businesses[0].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[0].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[0].coordinates.latitude)  %> "
         }
         var busines1 = {
             name: "<%-businesses[1].name-%>",
             display_address: '<%-businesses[1].location.display_address%> ',
+            image_url: '<%-businesses[1].image_url%>',
+            review_counts: '<%- businesses[1].review_count%> ',
+            prices: '<%- businesses[1].price %> ',
+            display_phoneNumber: '<%-businesses[1].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[1].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[1].coordinates.latitude)  %> "
         }
         var busines2 = {
             name: "<%-businesses[2].name-%>",
             display_address: '<%-businesses[2].location.display_address%> ',
+            image_url: '<%-businesses[2].image_url%>',
+            review_counts: '<%- businesses[2].review_count%> ',
+            prices: '<%- businesses[2].price %> ',
+            display_phoneNumber: '<%-businesses[2].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[2].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[2].coordinates.latitude)  %> "
         }
         var busines3 = {
             name: "<%-businesses[3].name-%>",
             display_address: '<%-businesses[3].location.display_address%> ',
+            image_url: '<%-businesses[3].image_url%>',
+            review_counts: '<%- businesses[3].review_count%> ',
+            prices: '<%- businesses[3].price %> ',
+            display_phoneNumber: '<%-businesses[3].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[3].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[3].coordinates.latitude)  %> "
         }
         var busines4 = {
             name: "<%-businesses[4].name-%>",
             display_address: '<%-businesses[4].location.display_address%> ',
+            image_url: '<%-businesses[4].image_url%>',
+            review_counts: '<%- businesses[4].review_count%> ',
+            prices: '<%- businesses[4].price %> ',
+            display_phoneNumber: '<%-businesses[4].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[4].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[4].coordinates.latitude)  %> "
         }
         var busines5 = {
             name: "<%-businesses[5].name-%>",
             display_address: '<%-businesses[5].location.display_address%> ',
+            image_url: '<%-businesses[5].image_url%>',
+            review_counts: '<%- businesses[5].review_count%> ',
+            prices: '<%- businesses[5].price %> ',
+            display_phoneNumber: '<%-businesses[5].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[5].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[5].coordinates.latitude)  %> "
         }
         var busines6 = {
             name: "<%-businesses[6].name-%>",
             display_address: '<%-businesses[6].location.display_address%> ',
+            image_url: '<%-businesses[6].image_url%>',
+            review_counts: '<%- businesses[6].review_count%> ',
+            prices: '<%- businesses[6].price %> ',
+            display_phoneNumber: '<%-businesses[6].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[6].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[6].coordinates.latitude)  %> "
         }
         var busines7 = {
             name: "<%-businesses[7].name-%>",
             display_address: '<%-businesses[7].location.display_address%> ',
+            image_url: '<%-businesses[7].image_url%>',
+            review_counts: '<%- businesses[7].review_count%> ',
+            prices: '<%- businesses[7].price %> ',
+            display_phoneNumber: '<%-businesses[7].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[7].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[7].coordinates.latitude)  %> "
         }
         var busines8 = {
             name: "<%-businesses[8].name-%>",
             display_address: '<%-businesses[8].location.display_address%> ',
+            image_url: '<%-businesses[8].image_url%>',
+            review_counts: '<%- businesses[8].review_count%> ',
+            prices: '<%- businesses[8].price %> ',
+            display_phoneNumber: '<%-businesses[8].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[8].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[8].coordinates.latitude)  %> "
         }
         var busines9 = {
             name: "<%-businesses[9].name-%>",
             display_address: '<%-businesses[9].location.display_address%> ',
+            image_url: '<%-businesses[9].image_url%>',
+            review_counts: '<%- businesses[9].review_count%> ',
+            prices: '<%- businesses[9].price %> ',
+            display_phoneNumber: '<%-businesses[9].display_phone%>',
             longitude: "<%-JSON.stringify(businesses[9].coordinates.longitude)%>",
             latitude: "<%-JSON.stringify(businesses[9].coordinates.latitude)  %> "
         }

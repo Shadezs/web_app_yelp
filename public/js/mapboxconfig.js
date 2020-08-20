@@ -1,11 +1,11 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZGVzeiIsImEiOiJja2NiNXd0bHEwMTNyMnJtenRybnoxZjRyIn0.4lceMjYIVlaaIT9E8FoSyw' //// use API KEY HERE
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/shadesz/ckdxii11i16sy19phd8a7sdp6',
-    center: [-120.111, 35.144],
-    zoom: 9
+mapboxgl.accessToken = //// use API KEY HERE
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/shadesz/cke0ucfal08fr19qtty2kfzdg',
+        center: [-120.111, 35.144],
+        zoom: 1
 
-});
+    });
 let geolocationjson = {
         type: 'FeatureCollection',
         features: [{
@@ -22,6 +22,7 @@ let geolocationjson = {
     }
     //console.log(bussniseobj[1].name)
 map.on('load', function() {
+    ///Makers for the bussines and pop ups
     map.loadImage(
         'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
         // Add an image to use as a custom marker
@@ -36,11 +37,11 @@ map.on('load', function() {
                     'features': [{
                         'type': 'Feature',
                         'properties': {
-                            'description': `<strong>${arrayBussines[0].name}</strong><p>
-                            
-                            
-                            address : ${arrayBussines[0].display_address}
-                            
+                            'description': `<strong>${arrayBussines[0].name}</strong><p>        
+                            Reviews : ${arrayBussines[0].review_counts} \
+                            Address : ${arrayBussines[0].display_address}
+                            Number :${arrayBussines[0].display_phoneNumber}
+
                             </p>`
                         },
                         'geometry': {
@@ -137,6 +138,36 @@ map.on('load', function() {
             });
         }
     );
+    ///loads bitmoji on user location
+    map.loadImage('/stylesheets/images/Screen Shot 2020-08-19 at 11.46.57 AM.png', function(error, image) {
+        if (error) throw error;
+        map.addImage('custom-userLocation', image);
+        map.addSource('userLocation', {
+            'type': 'FeatureCollection',
+            'features': [{
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-73.00, 120.232]
+                },
+                'properties': {
+                    'title': 'Mapbox',
+                    'discription': 'User A'
+                }
+            }]
+        })
+        map.addLayer({
+            'id': 'userLocation',
+            'type': 'symbol',
+            'source': 'userLocation',
+            'layout': {
+                'icon-image': 'custom-userLocation',
+                'icon-size': 0.25,
+                'icon-allow-overlap': true
+            }
+
+        })
+    })
     var marker = new mapboxgl.Marker({
             draggable: true
         })
@@ -194,6 +225,8 @@ map.on('load', function() {
     });
     map.flyTo({
         center: [arrayBussines[0].longitude, arrayBussines[0].latitude],
-        essential: true
+        essential: true,
+        zoom: 12,
+        speed: 0.7
     });
 });
