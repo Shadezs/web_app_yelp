@@ -49,7 +49,7 @@ router.post('/', async(req, res, next) => {
         method: 'get',
         url: 'https://api.yelp.com/v3/businesses/search?term=restaurants&location=' + userzip + '&price=1&sort_by=rating&limit=10',
         headers: {
-            'Authorization': YELP_API_KEY
+            'Authorization': 'Bearer dfeBZkngziUaBNGBh9N05JV7npLPtIFq2vhmqVRiUrEO3XAVnZHyjxvxCQraXCbQCP5lmeaU3Yho9ae_NV5Vsh3f539FFXTnVctpYrTJuojBwU25A9V-btTg17spX3Yx'
         }
     };
     console.log(config.url);
