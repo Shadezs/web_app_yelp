@@ -42,12 +42,13 @@ router.get('/', (req, res, next) => {
 /* GET yelpJSON.businesses */
 router.post('/', async(req, res, next) => {
     const userzip = req.body.userzip;
+    var restaurantType = req.body.restaurantType;// <---- Add variable to receive usercategory passed from the front-end
     console.log("Post request received");
     console.log(req.body.userzip);
 
     var config = {
         method: 'get',
-        url: 'https://api.yelp.com/v3/businesses/search?term=restaurants&location=' + userzip + '&price=1&sort_by=rating&limit=10',
+        url: 'https://api.yelp.com/v3/businesses/search?term=restaurants&categories=' + restaurantType + '&location=' + userzip + '&price=1&sort_by=rating&limit=10',
         headers: {
             'Authorization': YELP_API_KEY
         }
